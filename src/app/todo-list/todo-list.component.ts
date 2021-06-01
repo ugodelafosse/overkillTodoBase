@@ -3,7 +3,7 @@ import {Observable} from 'rxjs';
 import {Todo} from '../models/todo';
 import {Store} from '@ngrx/store';
 import {selectTodos} from '../store/selectors';
-import {loadTodos} from '../store/actions';
+import {loadTodos, toggleTodoState} from '../store/actions';
 
 @Component({
   selector: 'app-todo-list',
@@ -12,7 +12,7 @@ import {loadTodos} from '../store/actions';
 })
 export class TodoListComponent implements OnInit {
 
-  todos$: Observable<ReadonlyArray<Todo>>;
+  todos$: Observable<Array<Todo>>;
 
   constructor(private store: Store) {
     this.todos$ = this.store.select(selectTodos);
@@ -22,4 +22,7 @@ export class TodoListComponent implements OnInit {
      this.store.dispatch(loadTodos());
   }
 
+  setTodo(isClosed: boolean, todoId: string): void {
+    this.store.dispatch(toggleTodoState({isClosed, todoId}));
+  }
 }
