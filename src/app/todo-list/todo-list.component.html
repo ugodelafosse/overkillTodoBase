@@ -11,6 +11,9 @@
             >
               {{ todo.title }}
             </mat-checkbox>
+            <button [routerLink]="['todo/' + todo.title]" mat-icon-button matTooltip="Description" matTooltipPosition="right" color="primary" aria-label="Example icon button with a vertical three dot icon">
+              <mat-icon>description</mat-icon>
+            </button>
           </mat-list-item>
         </ng-container>
       </mat-list>

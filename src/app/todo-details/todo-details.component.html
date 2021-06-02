@@ -1,0 +1,16 @@
+<div id="container">
+  <mat-card>
+    <button [routerLink]="['/']" mat-icon-button matTooltip="Back to todos" color="primary" aria-label="Example icon button with a vertical three dot icon">
+      <mat-icon>clear</mat-icon>
+    </button>
+    <mat-card-title>
+      Todo: {{selectedTodo?.title}}
+    </mat-card-title>
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput [ngModel]="selectedTodo?.description"></textarea>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+</div>

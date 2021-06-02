@@ -5,9 +5,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {TodoListComponent} from './todo-list/todo-list.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FormsModule} from '@angular/forms';
@@ -20,11 +24,13 @@ import {Effects} from './store/effects';
 import {HttpClientModule} from '@angular/common/http';
 import {MockTodoApi} from './services/mock-todo-api';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import { TodoDetailsComponent } from './todo-details/todo-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,11 @@ import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
     MatIconModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatInputModule,
+    MatButtonModule,
     MatListModule,
+    MatFormFieldModule,
+    MatTooltipModule,
     MatCheckboxModule,
     FormsModule,
     HttpClientModule,
