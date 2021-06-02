@@ -1,6 +1,11 @@
 <div id="container">
   <mat-card>
-    <mat-card-title>Todos</mat-card-title>
+    <mat-card-title>
+      Todos
+      <button class="addTodo" (click)="openDialog()" mat-icon-button matTooltip="Add Todo" color="primary" aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-card-title>
     <mat-card-header>
       <mat-list>
         <ng-container *ngFor="let todo of todos$ | async">

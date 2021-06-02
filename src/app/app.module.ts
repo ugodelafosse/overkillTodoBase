@@ -14,6 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDialogModule} from '@angular/material/dialog';
 import {FormsModule} from '@angular/forms';
 import {StoreModule} from '@ngrx/store';
 import {todosReducer} from './store/reducer';
@@ -25,12 +26,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {MockTodoApi} from './services/mock-todo-api';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import { TodoDetailsComponent } from './todo-details/todo-details.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    TodoDetailsComponent
+    TodoDetailsComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { TodoDetailsComponent } from './todo-details/todo-details.component';
     MatIconModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatDialogModule,
     MatInputModule,
     MatButtonModule,
     MatListModule,

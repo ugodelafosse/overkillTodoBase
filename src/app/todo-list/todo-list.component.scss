@@ -8,6 +8,8 @@
   text-decoration: line-through;
 }
 
-button:hover {
-  cursor: pointer;
+button.addTodo {
+  position: absolute;
+  top: -5px;
+  right: 0;
 }

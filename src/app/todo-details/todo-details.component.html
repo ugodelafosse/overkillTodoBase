@@ -1,10 +1,10 @@
 <div id="container">
   <mat-card>
-    <button [routerLink]="['/']" mat-icon-button matTooltip="Back to todos" color="primary" aria-label="Example icon button with a vertical three dot icon">
-      <mat-icon>clear</mat-icon>
-    </button>
     <mat-card-title>
       Todo: {{selectedTodo?.title}}
+      <button [routerLink]="['/']" mat-icon-button matTooltip="Back to todos" color="primary" aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon>clear</mat-icon>
+      </button>
     </mat-card-title>
     <mat-card-content>
       <mat-form-field appearance="fill">
